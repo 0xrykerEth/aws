@@ -39,14 +39,14 @@
     </table>
 
     <script>
-        const userId = 1; // Replace with actual user ID
+        const userId = 1; 
 
         function fetchExpenses(type, tableId) {
             fetch(`/api/report/${type}/${userId}`)
                 .then(response => response.json())
                 .then(data => {
                     const tableBody = document.getElementById(tableId).querySelector('tbody');
-                    tableBody.innerHTML = ""; // Clear existing data
+                    tableBody.innerHTML = ""; 
 
                     data.forEach(expense => {
                         const row = `<tr>

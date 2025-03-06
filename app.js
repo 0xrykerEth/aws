@@ -32,6 +32,8 @@ app.use(login);
 app.use(added);
 app.use(signup);
 
+const HOST = process.env.MY_IP || 'localhost';
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'views','exist.html'));
 });
